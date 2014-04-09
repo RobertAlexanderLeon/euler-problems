@@ -13,3 +13,8 @@ end
 def multiples_of_3and5_in_range(range)
 	range.select{|number| divisible_by3(number)||divisible_by5(number)}
 end
+
+def sum_of_multiples(range)
+	filtered_array = multiples_of_3and5_in_range(range)
+	sum(filtered_array)
+end

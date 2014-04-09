@@ -40,8 +40,13 @@ it 'returns 3, 5, 6, 9 for 1 to 10' do
 	expect(multiples_of_3and5_in_range(1..10)).to eq [3,5,6,9,10]
 end
 
+it 'sums natural numbers below 10 that are divisible' do
+	expect(sum_of_multiples(1..9)).to eq 23
+end
 
-
+it 'sums natural numbers below 1000 that are divisible' do
+	expect(sum_of_multiples(1..999)).to eq 233168
+end
 
 
 end
