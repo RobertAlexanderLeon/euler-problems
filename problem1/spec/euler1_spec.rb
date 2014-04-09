@@ -20,18 +20,15 @@ it "knows that 7 if not multiple of 5" do
 	expect(divisible_by5(7)).to be_false
 end
 
-it "knows how to count from 1 to 1000" do
-	expect(one_to_a_thousand([1..1000])).to be_true
+it 'sums a bunch of numbers' do
+	expect(sum([1,2,3,4])).to eq 10
 end
 
-
-it "knows that 1001 is not in the count from 1 to 1000" do
-    expect(one_to_a_thousand([1..1001])).to be_false	
+it 'sums a bunch of numbers by collecting' do
+	array = double :array
+	expect(array).to receive(:inject).with(:+)
+	sum(array)
 end
-
-
-
-
 
 
 
