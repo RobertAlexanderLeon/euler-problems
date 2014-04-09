@@ -30,7 +30,15 @@ it 'sums a bunch of numbers by collecting' do
 	sum(array)
 end
 
+it 'returns multiples of 3 and 5 in range' do
+	range = double :range
+	expect(range).to receive(:select)
+	multiples_of_3and5_in_range(range)
+end
 
+it 'returns 3, 5, 6, 9 for 1 to 10' do
+	expect(multiples_of_3and5_in_range(1..10)).to eq [3,5,6,9,10]
+end
 
 
 
